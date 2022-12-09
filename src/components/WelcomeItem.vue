@@ -1,115 +1,115 @@
 <template>
-    <div class="item">
-        <i>
-            <slot name="icon"></slot>
-        </i>
+  <div class="item">
+    <i>
+      <slot name="icon"></slot>
+    </i>
 
-        <div class="details">
-            <h3>
-                <slot name="heading"></slot>
-            </h3>
+    <div class="details">
+      <h3>
+        <slot name="heading"></slot>
+      </h3>
 
-            <slot></slot>
-        </div>
+      <slot></slot>
     </div>
+  </div>
 </template>
 
 <style scoped>
 .item {
-    margin-top: 2rem;
+  margin-top: 2rem;
 
-    display: flex;
+  display: flex;
 }
 
 .details {
-    flex: 1;
+  flex: 1;
 
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 i {
-    display: flex;
+  display: flex;
 
-    place-items: center;
+  place-items: center;
 
-    place-content: center;
+  place-content: center;
 
-    width: 32px;
+  width: 32px;
 
-    height: 32px;
+  height: 32px;
 
-    color: var(--color-text);
+  color: var(--color-text);
 }
 
 h3 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 
-    font-weight: 500;
+  font-weight: 500;
 
-    margin-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
 
-    color: var(--color-heading);
+  color: var(--color-heading);
 }
 
 @media (min-width: 1024px) {
-    .item {
-        margin-top: 0;
+  .item {
+    margin-top: 0;
 
-        padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
-    }
+    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+  }
 
-    i {
-        top: calc(50% - 25px);
+  i {
+    top: calc(50% - 25px);
 
-        left: -26px;
+    left: -26px;
 
-        position: absolute;
+    position: absolute;
 
-        border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border);
 
-        background: var(--color-background);
+    background: var(--color-background);
 
-        border-radius: 8px;
+    border-radius: 8px;
 
-        width: 50px;
+    width: 50px;
 
-        height: 50px;
-    }
+    height: 50px;
+  }
 
-    .item:before {
-        content: " ";
+  .item:before {
+    content: " ";
 
-        border-left: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
 
-        position: absolute;
+    position: absolute;
 
-        left: 0;
+    left: 0;
 
-        bottom: calc(50% + 25px);
+    bottom: calc(50% + 25px);
 
-        height: calc(50% - 25px);
-    }
+    height: calc(50% - 25px);
+  }
 
-    .item:after {
-        content: " ";
+  .item:after {
+    content: " ";
 
-        border-left: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
 
-        position: absolute;
+    position: absolute;
 
-        left: 0;
+    left: 0;
 
-        top: calc(50% + 25px);
+    top: calc(50% + 25px);
 
-        height: calc(50% - 25px);
-    }
+    height: calc(50% - 25px);
+  }
 
-    .item:first-of-type:before {
-        display: none;
-    }
+  .item:first-of-type:before {
+    display: none;
+  }
 
-    .item:last-of-type:after {
-        display: none;
-    }
+  .item:last-of-type:after {
+    display: none;
+  }
 }
 </style>

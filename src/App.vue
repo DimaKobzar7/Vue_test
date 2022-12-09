@@ -1,7 +1,8 @@
 <script setup>
 // import { RouterLink, RouterView } from "vue-router";
 // import HelloWorld from "./components/HelloWorld.vue";
-import TestTryVue from "./components/TestTry.vue";
+// import TestTryVue from "./components/TestTry.vue";
+import TheGeneralVue from "./components/TheGeneral.vue";
 </script>
 
 <template>
@@ -23,8 +24,11 @@ import TestTryVue from "./components/TestTry.vue";
       </nav>
     </div>
   </header> -->
-  <TestTryVue />
-
+  <TheGeneralVue />
+  <!-- <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </nav> -->
   <!-- <RouterView /> -->
 </template>
 

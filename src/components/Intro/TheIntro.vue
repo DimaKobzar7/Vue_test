@@ -6,7 +6,34 @@ import TheHeader from "../Header/TheHeader.vue";
 import RunningText from "../RunningText.vue";
 import TheSpiner from "../Spiner/TheSpiner.vue";
 import "../../assets/intro.css";
+import TheError404 from "../Error404/TheError404.vue";
 </script>
+
+<!-- <script>
+const routes = {
+  "/": TheError404,
+  "/about": TheError404,
+  "/who": TheError404,
+};
+
+export default {
+  data() {
+    return {
+      currentPath: window.location.hash,
+    };
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || "/"];
+    },
+  },
+  mounted() {
+    window.addEventListener("hashchange", () => {
+      this.currentPath = window.location.hash;
+    });
+  },
+};
+</script> -->
 <!-- <RouterLink to="/">Home</RouterLink>
 <RouterLink to="/about">About</RouterLink> -->
 <template>
@@ -36,6 +63,9 @@ import "../../assets/intro.css";
       What?
     </RouterLink>
     <RouterLink to="/who" class="intro__vertical-link">Who?</RouterLink>
-    <RouterView />
+    <!-- <a href="#/">Home</a> | <a href="#/about">About</a> |
+    <a href="#/non-existent-path">Broken Link</a>
+    <component :is="currentView" /> -->
+    <!-- <RouterView /> -->
   </div>
 </template>

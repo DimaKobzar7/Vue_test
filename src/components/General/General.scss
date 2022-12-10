@@ -1,4 +1,15 @@
-@import "../../assets/misins";
+@import "../../assets/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Grtsk Giga";
+  font-weight: 600;
+  overflow: hidden;
+}
 
 .section {
   background-color: #bebebe;

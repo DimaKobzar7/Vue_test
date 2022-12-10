@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Grtsk Giga";
-  font-weight: 600;
-  overflow: hidden;
-}
-
 .intro {
   position: relative;
 
@@ -208,7 +197,7 @@ body {
 .intro__vertical-link:hover {
   color: white;
 }
-
+/*
 .intro__running-text {
   position: relative;
 
@@ -237,9 +226,10 @@ body {
     top: -26vw;
     transform: rotate(-33deg);
   }
-}
+} */
 
-.intro__text {
+/* сюда можно абсолют поставить и возможно анимации на этих элементах не будет ломатся  */
+/* .intro__text {
   margin: 0;
 
   font-style: italic;
@@ -310,4 +300,4 @@ body {
   to {
     transform: translate(200%, 0);
   }
-}
+} */

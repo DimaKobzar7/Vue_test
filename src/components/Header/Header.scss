@@ -1,4 +1,4 @@
-@import "../../assets/misins";
+@import "../../assets/mixins";
 
 .header {
   display: flex;
@@ -13,6 +13,14 @@
     @include onDesktop {
       width: 38px;
       height: 38px;
+    }
+
+    &:hover .header__switch-link--RU {
+      left: 30px;
+    }
+
+    &:hover .header__switch-link--UA {
+      left: 75px;
     }
 
     img {
@@ -33,36 +41,14 @@
     padding: 10px;
     font-size: 14px;
     color: #373737;
+
+    @include onTablet {
+      font-size: 16px;
+    }
+
+    &--RU,
+    &--UA {
+      opacity: 0;
+    }
   }
-}
-
-// .header__switch-link {
-//   position: absolute;
-//   left: 0;
-//   text-decoration: none;
-//   padding: 10px;
-//   font-size: 14px;
-//   color: #373737;
-// }
-
-@media (min-width: 768px) {
-  .header__switch-link {
-    font-size: 16px;
-  }
-}
-
-.header__switch-link--RU {
-  opacity: 0;
-}
-
-.header__switch-link--UA {
-  opacity: 0;
-}
-
-.header__language:hover .header__switch-link--RU {
-  left: 30px;
-}
-
-.header__language:hover .header__switch-link--UA {
-  left: 75px;
 }

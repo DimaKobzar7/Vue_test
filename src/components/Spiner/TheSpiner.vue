@@ -1,6 +1,6 @@
 <script setup>
 // import "../../assets/spiner.css";
-import "./Spiner.css";
+import "./Spiner.scss";
 </script>
 <template>
   <div class="spiner">

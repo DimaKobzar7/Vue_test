@@ -28,8 +28,9 @@ import TheGeneral from "./components/General/TheGeneral.vue";
   <!-- <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
-  </nav>
-  <RouterView /> -->
+  </nav> -->
+  <!-- там где находится RouterView там и будет отображатся компонет который нажаты по ссылке-->
+  <RouterView />
 </template>
 
 <!--

@@ -2,7 +2,7 @@
 // import { RouterLink, RouterView } from "vue-router";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TestTryVue from "./components/TestTry.vue";
-import TheGeneralVue from "./components/General/TheGeneral.vue";
+import TheGeneral from "./components/General/TheGeneral.vue";
 </script>
 
 <template>
@@ -24,12 +24,12 @@ import TheGeneralVue from "./components/General/TheGeneral.vue";
       </nav>
     </div>
   </header> -->
-  <TheGeneralVue />
+  <TheGeneral />
   <!-- <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
-  </nav> -->
-  <!-- <RouterView /> -->
+  </nav>
+  <RouterView /> -->
 </template>
 
 <!--

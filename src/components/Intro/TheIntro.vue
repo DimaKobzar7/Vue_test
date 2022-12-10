@@ -36,5 +36,6 @@ import "../../assets/intro.css";
       What?
     </RouterLink>
     <RouterLink to="/who" class="intro__vertical-link">Who?</RouterLink>
+    <RouterView />
   </div>
 </template>

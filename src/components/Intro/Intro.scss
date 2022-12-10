@@ -1,4 +1,6 @@
-/* .intro {
+@import "../../assets/mixins";
+
+.intro {
   position: relative;
 
   display: flex;
@@ -7,30 +9,33 @@
 
   min-height: 100vh;
   padding: 16px 0;
-}
 
-@media (min-width: 1024px) {
-  .intro {
+  @include onDesktop {
     padding: 24px 0;
+  }
+
+  &__front {
+    position: relative;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 auto;
+    width: fit-content;
+
+    img {
+      filter: blur(38px);
+      height: 294px;
+    }
   }
 }
 
-.intro__front {
-  position: relative;
-}
-
-.intro__img {
-  position: relative;
-  z-index: 1;
-
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.intro__img img {
-  filter: blur(38px);
-  height: 294px;
-}
+// .intro__img img {
+//   filter: blur(38px);
+//   height: 294px;
+// }
 
 @media (min-width: 768px) {
   .intro__img img {
@@ -196,4 +201,4 @@
 
 .intro__vertical-link:hover {
   color: white;
-} */
+}

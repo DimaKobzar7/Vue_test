@@ -22,59 +22,51 @@
     top: -26vw;
     transform: rotate(-33deg);
   }
-}
 
-/* сюда можно абсолют поставить и возможно анимации на этих элементах не будет ломатся  */
-.running-text__item {
-  margin: 0;
+  &__item {
+    margin: 0;
 
-  font-style: italic;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.1;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
 
-  text-align: center;
-  text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
 
-  opacity: 0.1;
+    opacity: 0.1;
 
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px #373737;
-  color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #373737;
+    color: transparent;
 
-  white-space: nowrap;
-}
+    white-space: nowrap;
 
-@media (min-width: 768px) {
-  .running-text__item {
-    font-size: 42px;
-  }
-}
+    @include onTablet {
+      font-size: 42px;
+    }
 
-@media (min-width: 1440px) {
-  .running-text__item {
-    font-size: 52px;
-  }
-}
+    @include onWideDesktop {
+      font-size: 52px;
+    }
 
-.running-text__item--right {
-  animation: runningTextUp 4s infinite linear;
-}
+    &--right {
+      animation: runningTextUp 4s infinite linear;
+    }
 
-.running-text__item--left {
-  transform: rotate(180deg) translateX(-30%);
-  animation: runningTextDown 4s infinite linear;
-}
+    &--left {
+      // транслейт тут не нужен наверно
+      transform: rotate(180deg) translateX(-30%);
+      animation: runningTextDown 4s infinite linear;
 
-@media (min-width: 768px) {
-  .intro__text--left {
-    margin-bottom: 24px;
-  }
-}
+      @include onTablet {
+        margin-bottom: 24px;
+      }
 
-@media (min-width: 1024px) {
-  .intro__text--left {
-    margin-bottom: 36px;
+      @include onDesktop {
+        margin-bottom: 36px;
+      }
+    }
   }
 }
 

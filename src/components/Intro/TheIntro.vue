@@ -5,7 +5,8 @@ import TheHeader from "../Header/TheHeader.vue";
 // import RunningText from "../Running/TheRunningText.Vue";
 import RunningText from "../RunningText.vue";
 import TheSpiner from "../Spiner/TheSpiner.vue";
-import "../../assets/intro.css";
+// import "../../assets/intro.css";
+import "./Intro.scss";
 import TheError404 from "../Error404/TheError404.vue";
 </script>
 

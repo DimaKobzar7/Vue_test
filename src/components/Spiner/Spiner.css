@@ -1,4 +1,4 @@
-/* .spiner {
+.spiner {
   position: absolute;
   height: 90px;
   bottom: -20px;
@@ -64,4 +64,4 @@
   to {
     transform: rotate(-360deg);
   }
-} */
+}

@@ -2,7 +2,7 @@
 // import { RouterLink, RouterView } from "vue-router";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TestTryVue from "./components/TestTry.vue";
-import TheGeneralVue from "./components/TheGeneral.vue";
+import TheGeneralVue from "./components/General/TheGeneral.vue";
 </script>
 
 <template>

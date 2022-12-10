@@ -1,4 +1,4 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,4 +58,4 @@
 
 .header__language:hover .header__switch-link--UA {
   left: 75px;
-}
+} */

@@ -1,6 +1,3 @@
-<script setup>
-import "../assets/intro.css";
-</script>
 <!-- почему то оно не работает в паке со своим именем и эта странная ошибка еслинта-->
 <template>
   <div class="intro__running-text">

@@ -1,8 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import TheHeader from "./TheHeader.vue";
-import RunningText from "./RunningText.vue";
-import TheSpiner from "./TheSpiner.vue";
+import TheHeader from "../Header/TheHeader.vue";
+// import RunningText from "../RunningText/TheRunningText.Vue";
+// import RunningText from "../Running/TheRunningText.Vue";
+import RunningText from "../RunningText.vue";
+import TheSpiner from "../Spiner/TheSpiner.vue";
+import "../../assets/intro.css";
 </script>
 <!-- <RouterLink to="/">Home</RouterLink>
 <RouterLink to="/about">About</RouterLink> -->
@@ -15,7 +18,7 @@ import TheSpiner from "./TheSpiner.vue";
         EVENT AGENCY
       </h1>
       <div class="intro__img">
-        <img src="../images/img/EllipseClear.png" alt="Ellipse" />
+        <img src="../../images/img/EllipseClear.png" alt="Ellipse" />
         <TheSpiner />
       </div>
     </div>

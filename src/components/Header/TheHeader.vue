@@ -1,7 +1,11 @@
+<script setup>
+import "./Header.scss";
+</script>
+
 <template>
   <header class="header">
     <div class="header__language">
-      <img src="../images/svg/language.svg" alt="language" />
+      <img src="../../images/svg/language.svg" alt="language" />
       <a class="header__switch-link header__switch-link--RU" href="#">RU</a>
       <a class="header__switch-link header__switch-link--UA" href="#">UA</a>
     </div>
@@ -26,7 +30,7 @@
     </div>
     <div class="hamburger-menu">
       <a href="#">
-        <img src="../images/svg/hamburger.svg" alt="hamburger" />
+        <img src="../../images/svg/hamburger.svg" alt="hamburger" />
       </a>
     </div>
   </header>

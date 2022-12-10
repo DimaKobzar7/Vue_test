@@ -1,3 +1,7 @@
+<script setup>
+// import "../../assets/spiner.css";
+import "./Spiner.css";
+</script>
 <template>
   <div class="spiner">
     <svg viewBox="0 0 100 100" width="100" height="100">

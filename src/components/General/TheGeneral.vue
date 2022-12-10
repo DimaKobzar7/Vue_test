@@ -1,5 +1,6 @@
 <script setup>
-import TheIntro from "./TheIntro.vue";
+import TheIntro from "../Intro/TheIntro.vue";
+import "./General.scss";
 </script>
 
 <template>

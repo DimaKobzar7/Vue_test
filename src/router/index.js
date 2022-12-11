@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
-import Error from "../components/Error404/TheError404.vue";
+import Error from "../components/Error/TheError.vue";
 import TheGeneral from "../components/General/TheGeneral.vue";
 
 const router = createRouter({

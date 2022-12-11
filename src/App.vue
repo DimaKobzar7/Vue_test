@@ -43,34 +43,51 @@
 <style>
 .route-enter-from {
   /* opacity: 0; */
+  /* opacity: 1; */
   /* transform: translateX(1000px); */
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in;
+  transform: translateX(100%) rotate(360deg);
+  /* transition: transform 0.3s ease-in; */
+  transition: all 0.3s ease-in;
+  /* transition: transform 1s ease-in, rotate 2s; */
+  /* background-color: red; */
   /* background-color: red; */
   /* color: red; */
 }
 
 .route-enter-to {
   /* opacity: 0; */
+  /* opacity: 1; */
   /* transform: translateX(1000px); */
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in;
-  background-color: red;
+  transform: translateX(100%) rotate(360deg);
+  /* transition: transform 0.3s ease-in; */
+  transition: all 0.3s ease-in;
+  /* transition: transform 1s ease-in, rotate 2s; */
+  /* background-color: red; */
+  /* background-color: red; */
   /* color: red; */
 }
 
 .route-enter-active {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in;
-  background-color: red;
+  /* opacity: 0; */
+  /* opacity: 1; */
+  transform: translateX(100%) rotate(360deg);
+  /* transition: transform 0.3s ease-in; */
+  transition: all 0.3s ease-in;
+  /* transition: transform 1s ease-in, rotate 2s; */
+  /* background-color: red; */
+  /* background-color: red; */
   /* color: red; */
 }
 
 .route-leave-from {
+  /* opacity: 1; */
   /* opacity: 0; */
   /* transform: translateX(1000px); */
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in;
+  transform: translateX(-100%) rotate(360deg);
+  /* transition: transform 0.3s ease-in; */
+  transition: all 0.3s ease-in;
+  /* transition: transform 1s ease-in, rotate 2s; */
+  /* background-color: red; */
   /* transition: all 2s ease-in; */
   /* background-color: red; */
   /* color: red; */
@@ -78,16 +95,24 @@
 
 .route-leave-to {
   /* opacity: 0; */
+  /* opacity: 1; */
   /* transform: translateX(-100px); */
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in;
+  transform: translateX(-100%) rotate(360deg);
+  /* transition: transform 0.3s ease-in; */
+  transition: all 0.3s ease-in;
+  /* transition: transform 1s ease-in, rotate 2s; */
+  /* background-color: red; */
   /* background-color: red; */
   /* color: red; */
 }
 
 .route-leave-active {
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in;
+  /* opacity: 0; */
+  /* opacity: 1; */
+  transform: translateX(-100%) rotate(360deg);
+  /* transition: transform 0.3s ease-in; */
+  /* transition: transform 1s ease-in, rotate 2s; */
+  transition: all 0.3s ease-in;
   /* background-color: red; */
   /* color: red; */
 }

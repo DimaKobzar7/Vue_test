@@ -1,5 +1,5 @@
 <script setup>
-import "../Error404/Error404.scss";
+import "../Error/Error.scss";
 import { RouterLink } from "vue-router";
 
 import barba from "@barba/core";
@@ -11,7 +11,7 @@ console.log("error");
   <main data-barba="wrapper">
     <section data-barba="container" data-barba-namespace="errorMessage">
       <div class="error-message">
-        <RouterLink to="/">Go back</RouterLink>
+        <RouterLink to="/">Click here</RouterLink>
       </div>
     </section>
   </main>

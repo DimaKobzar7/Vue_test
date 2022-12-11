@@ -16,10 +16,26 @@ import { gsap } from "gsap";
     <section data-barba="container" data-barba-namespace="home" class="section">
       <div class="container">
         <TheIntro />
+        <!-- <router-view v-slot="{ TheIntro }">
+          <transition name="fade" mode="out-in">
+            <component :is="TheIntro" />
+          </transition>
+        </router-view> -->
       </div>
     </section>
   </main>
 </template>
+
+<!-- <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style> -->
 
 <script>
 export default {
@@ -43,22 +59,22 @@ export default {
       transitions: [
         {
           name: "opacity-transition",
-          leave(data) {
+          async leave(data) {
             console.log(data);
-            return gsap.to(data.current.container, {
-              opacity: 0,
-            });
+            // return gsap.to(data.current.container, {
+            //   opacity: 0,
+            // });
           },
           enter(data) {
             return gsap.from(data.next.container, {
-              opacity: 1,
+              opacity: 0,
             });
           },
         },
       ],
     });
     const container = document.querySelector("main");
-    console.log(container);
+    // console.log(container);
     const animateit = function (e) {
       const title = document.querySelector(".intro__title");
 
@@ -79,35 +95,5 @@ export default {
     container.addEventListener("mousemove", animateit);
     container.addEventListener("mouseleave", animateit);
   },
-  // data() {
-  //   return {};
-  // },
-  // methods: {
-  //   //  анимация очень ломаная и дерганая особенно на маленьком экране и она просто перестает работать иногда
-  //   test() {
-  //     console.log("gg");
-  //     const container = document.querySelector("main");
-  //     // console.log(container);
-  //     const animateit = function (e) {
-  //       const title = document.querySelector(".intro__title");
-
-  //       const { offsetX: x, offsetY: y } = e;
-  //       const { offsetWidth: width, offsetHeight: height } = this;
-
-  //       let move = 25;
-  //       let xMove = (x / width) * (move * 2) - move;
-  //       let yMove = (y / height) * (move * 2) - move;
-
-  //       title.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-  //       if (e.type === "mouseleave") {
-  //         title.style.transform = "";
-  //       }
-  //     };
-
-  //     container.addEventListener("mousemove", animateit);
-  //     container.addEventListener("mouseleave", animateit);
-  //   },
-  // },
 };
 </script>

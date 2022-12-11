@@ -3,6 +3,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 import router from "./router";
+import barba from "@barba/core";
 
 import "./assets/main.css";
 // import "./assets/container.scss";
@@ -16,6 +17,25 @@ app.mount("#app");
 
 // barba.init({
 //   // ...
+// });
+
+// barba.init({
+//   transitions: [
+//     {
+//       name: "opacity-transition",
+//       leave(data) {
+//         console.log(data);
+//         // return gsap.to(data.current.container, {
+//         //   opacity: 0,
+//         // });
+//       },
+//       enter(data) {
+//         // return gsap.from(data.next.container, {
+//         //   opacity: 0,
+//         // });
+//       },
+//     },
+//   ],
 // });
 
 // this.$nextTick(() => {

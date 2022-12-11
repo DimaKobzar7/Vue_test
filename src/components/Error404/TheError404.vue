@@ -9,7 +9,7 @@ console.log("error");
 
 <template>
   <main data-barba="wrapper">
-    <section data-barba="container" data-barba-namespace="home">
+    <section data-barba="container" data-barba-namespace="errorMessage">
       <div class="error-message">
         <RouterLink to="/">Go back</RouterLink>
       </div>
@@ -23,17 +23,17 @@ export default {
     barba.init({
       transitions: [
         {
-          name: "opacity-transition",
+          name: "messageErorr",
           leave(data) {
             console.log(data);
-            return gsap.to(data.current.container, {
-              opacity: 0,
-            });
+            // return gsap.to(data.current.container, {
+            //   opacity: 0,
+            // });
           },
           enter(data) {
-            return gsap.from(data.next.container, {
-              opacity: 0,
-            });
+            // return gsap.from(data.next.container, {
+            //   opacity: 0,
+            // });
           },
         },
       ],

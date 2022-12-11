@@ -1,6 +1,7 @@
-<script setup>
+<!-- <script setup>
 import { RouterLink } from "vue-router";
 import TheHeader from "../Header/TheHeader.vue";
+import { ref } from "vue";
 // import RunningText from "../RunningText/TheRunningText.Vue";
 // import RunningText from "../Running/TheRunningText.Vue";
 import RunningText from "../RunningText.vue";
@@ -12,37 +13,16 @@ console.log("main");
 // const langIco = document.querySelector(".header__language");
 
 // console.log(langIco);
-</script>
-
-<!-- <script>
-const routes = {
-  "/": TheError404,
-  "/about": TheError404,
-  "/who": TheError404,
-};
-
-export default {
-  data() {
-    return {
-      currentPath: window.location.hash,
-    };
-  },
-  computed: {
-    currentView() {
-      return routes[this.currentPath.slice(1) || "/"];
-    },
-  },
-  mounted() {
-    window.addEventListener("hashchange", () => {
-      this.currentPath = window.location.hash;
-    });
-  },
-};
 </script> -->
+
 <!-- <RouterLink to="/">Home</RouterLink>
 <RouterLink to="/about">About</RouterLink> -->
 <template>
   <div class="intro">
+    <!-- <transition name="fade">
+      <div v-if="showP">gfhfgjh</div>
+    </transition>
+    <button @click="showP = !showP">toggle</button> -->
     <TheHeader />
     <div class="intro__front">
       <h1 class="intro__title">
@@ -72,27 +52,59 @@ export default {
     <a href="#/non-existent-path">Broken Link</a>
     <component :is="currentView" /> -->
     <!-- <RouterView /> -->
-    <transition name="slide-fade">
+    <!-- <transition name="slide-fade">
       <router-view></router-view>
-    </transition>
+    </transition> -->
+    <!-- <router-view v-slot="{ TheHeader }">
+      <transition>
+        <component :is="TheHeader" />
+      </transition>
+    </router-view> -->
+    <!-- <router-view v-slot="{ Component }">
+      <transition name="route" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view> -->
+    <!-- <RouterView /> -->
   </div>
 </template>
 
+<script>
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
+import TheHeader from "../Header/TheHeader.vue";
+import RunningText from "../RunningText.vue";
+import TheSpiner from "../Spiner/TheSpiner.vue";
+import "../../assets/intro.css";
+import "./Intro.scss";
+
+export default {
+  components: { TheHeader, RunningText, TheSpiner, RouterLink },
+  // setup() {
+  //   const showP = ref(true);
+  //   // console.log(showP);
+
+  //   return { showP };
+  // },
+};
+</script>
+
 <style>
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter,
-.slide-fade-leave-active {
-  padding-left: 10px;
+.route-enter-from {
   opacity: 0;
+  transform: translateX(100px);
+}
+
+.route-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.route-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.route-leave-active {
+  transition: all 0.3s ease-in;
 }
 </style>
-<!-- <script>
-const langIco = document.querySelector(".header__language");
-
-console.log(langIco);
-</script> -->

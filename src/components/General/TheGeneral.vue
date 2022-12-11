@@ -1,13 +1,18 @@
 <script setup>
 import TheIntro from "../Intro/TheIntro.vue";
 import "./General.scss";
+import barba from "@barba/core";
+
+// barba.init({
+//   // ...
+// });
 </script>
 
 <template>
   <!-- костыль так как не смог придумать событие загрузки страницы -->
   <!-- <main v-on:mousemove="test"> -->
-  <main>
-    <section class="section">
+  <main data-barba="wrapper">
+    <section data-barba="container" data-barba-namespace="home" class="section">
       <div class="container">
         <TheIntro />
       </div>
@@ -17,7 +22,21 @@ import "./General.scss";
 
 <script>
 export default {
+  // анимация стала плавнее!!!
   mounted() {
+    // поставил именно сюда чтобы все успело отрендерится
+    barba.init({
+      transitions: [{
+    name: 'default-transition',
+    leave() {
+      // create your stunning leave animation here
+
+    },
+    enter() {
+      // create your amazing enter animation here
+    }
+  }]
+    });
     const container = document.querySelector("main");
     console.log(container);
     const animateit = function (e) {

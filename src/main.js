@@ -14,6 +14,10 @@ app.use(router);
 
 app.mount("#app");
 
+// barba.init({
+//   // ...
+// });
+
 // this.$nextTick(() => {
 //   const container = document.querySelector("main");
 //   const animateit = function (e) {

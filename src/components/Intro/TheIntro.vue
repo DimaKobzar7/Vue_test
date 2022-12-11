@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 import TheHeader from "../Header/TheHeader.vue";
 // import RunningText from "../RunningText/TheRunningText.Vue";
 // import RunningText from "../Running/TheRunningText.Vue";
@@ -7,7 +7,7 @@ import RunningText from "../RunningText.vue";
 import TheSpiner from "../Spiner/TheSpiner.vue";
 // import "../../assets/intro.css";
 import "./Intro.scss";
-import TheError404 from "../Error404/TheError404.vue";
+// import TheError404 from "../Error404/TheError404.vue";
 console.log("main");
 // const langIco = document.querySelector(".header__language");
 

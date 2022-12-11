@@ -4,7 +4,8 @@ import "./General.scss";
 </script>
 
 <template>
-  <main>
+  <!-- костыль так как не смог придумать событие загрузки страницы -->
+  <main v-on:mousemove="test">
     <section class="section">
       <div class="container">
         <TheIntro />
@@ -19,12 +20,11 @@ export default {
     return {};
   },
   methods: {
-    // коряво но работаяет нужно от обработчиков избавится
-    // и анимация плавно не вылазит
-    // возможно придется делать костыль из анимации для выезда ссылок
+    //  анимация очень ломаная и дерганая
     test() {
+      // console.log("gg");
       const container = document.querySelector("main");
-      console.log(container);
+      // console.log(container);
       const animateit = function (e) {
         const title = document.querySelector(".intro__title");
 

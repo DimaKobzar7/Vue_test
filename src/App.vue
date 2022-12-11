@@ -24,7 +24,7 @@ import TheGeneral from "./components/General/TheGeneral.vue";
       </nav>
     </div>
   </header> -->
-  <TheGeneral />
+  <!-- <TheGeneral /> -->
   <!-- <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>

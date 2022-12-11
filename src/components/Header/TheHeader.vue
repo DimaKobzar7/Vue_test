@@ -1,10 +1,12 @@
 <script setup>
 import "./Header.scss";
+
+
 </script>
 
 <template>
   <header class="header">
-    <div class="header__language">
+    <div v-on:click="test" class="header__language">
       <img src="../../images/svg/language.svg" alt="language" />
       <a class="header__switch-link header__switch-link--RU" href="#">RU</a>
       <a class="header__switch-link header__switch-link--UA" href="#">UA</a>

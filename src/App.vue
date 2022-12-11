@@ -1,11 +1,11 @@
-<script setup>
+<!-- <script setup>
 // import { RouterLink, RouterView } from "vue-router";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TestTryVue from "./components/TestTry.vue";
 // import TheGeneral from "./components/General/TheGeneral.vue";
 // const langIco = document.querySelector(".header__language");
 // console.log(langIco);
-</script>
+</script> -->
 
 <template>
   <!-- <header>
@@ -33,7 +33,7 @@
   </nav> -->
   <!-- там где находится RouterView там и будет отображатся компонет который нажаты по ссылке-->
   <router-view v-slot="{ Component }">
-    <transition name="route" mode="out-in">
+    <transition name="route" mode="in-out">
       <component :is="Component"></component>
     </transition>
   </router-view>

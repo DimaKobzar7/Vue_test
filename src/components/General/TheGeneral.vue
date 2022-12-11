@@ -1,8 +1,9 @@
 <script setup>
 import TheIntro from "../Intro/TheIntro.vue";
 import "./General.scss";
+import "./Logo.scss";
 import barba from "@barba/core";
-
+import { gsap } from "gsap";
 // barba.init({
 //   // ...
 // });
@@ -25,17 +26,36 @@ export default {
   // анимация стала плавнее!!!
   mounted() {
     // поставил именно сюда чтобы все успело отрендерится
+    // barba.init({
+    //   transitions: [
+    //     {
+    //       name: "default-transition",
+    //       leave() {
+    //         // create your stunning leave animation here
+    //       },
+    //       enter() {
+    //         // create your amazing enter animation here
+    //       },
+    //     },
+    //   ],
+    // });
     barba.init({
-      transitions: [{
-    name: 'default-transition',
-    leave() {
-      // create your stunning leave animation here
-
-    },
-    enter() {
-      // create your amazing enter animation here
-    }
-  }]
+      transitions: [
+        {
+          name: "opacity-transition",
+          leave(data) {
+            console.log(data);
+            return gsap.to(data.current.container, {
+              opacity: 0,
+            });
+          },
+          enter(data) {
+            return gsap.from(data.next.container, {
+              opacity: 1,
+            });
+          },
+        },
+      ],
     });
     const container = document.querySelector("main");
     console.log(container);

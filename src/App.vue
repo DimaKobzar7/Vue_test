@@ -42,21 +42,54 @@
 
 <style>
 .route-enter-from {
-  opacity: 0;
-  transform: translateX(100px);
+  /* opacity: 0; */
+  /* transform: translateX(1000px); */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  /* background-color: red; */
+  /* color: red; */
+}
+
+.route-enter-to {
+  /* opacity: 0; */
+  /* transform: translateX(1000px); */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  background-color: red;
+  /* color: red; */
 }
 
 .route-enter-active {
-  transition: all 0.3s ease-out;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  background-color: red;
+  /* color: red; */
+}
+
+.route-leave-from {
+  /* opacity: 0; */
+  /* transform: translateX(1000px); */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in;
+  /* transition: all 2s ease-in; */
+  /* background-color: red; */
+  /* color: red; */
 }
 
 .route-leave-to {
-  opacity: 0;
-  transform: translateX(-100px);
+  /* opacity: 0; */
+  /* transform: translateX(-100px); */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in;
+  /* background-color: red; */
+  /* color: red; */
 }
 
 .route-leave-active {
-  transition: all 0.3s ease-in;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in;
+  /* background-color: red; */
+  /* color: red; */
 }
 </style>
 

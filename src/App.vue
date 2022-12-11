@@ -2,7 +2,9 @@
 // import { RouterLink, RouterView } from "vue-router";
 // import HelloWorld from "./components/HelloWorld.vue";
 // import TestTryVue from "./components/TestTry.vue";
-import TheGeneral from "./components/General/TheGeneral.vue";
+// import TheGeneral from "./components/General/TheGeneral.vue";
+// const langIco = document.querySelector(".header__language");
+// console.log(langIco);
 </script>
 
 <template>

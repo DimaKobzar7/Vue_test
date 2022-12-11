@@ -8,6 +8,10 @@ import TheSpiner from "../Spiner/TheSpiner.vue";
 // import "../../assets/intro.css";
 import "./Intro.scss";
 import TheError404 from "../Error404/TheError404.vue";
+console.log("main");
+// const langIco = document.querySelector(".header__language");
+
+// console.log(langIco);
 </script>
 
 <!-- <script>
@@ -70,3 +74,9 @@ export default {
     <!-- <RouterView /> -->
   </div>
 </template>
+
+<!-- <script>
+const langIco = document.querySelector(".header__language");
+
+console.log(langIco);
+</script> -->

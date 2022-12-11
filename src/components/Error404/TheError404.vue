@@ -1,6 +1,6 @@
 <script setup>
 import "../Error404/Error404.scss";
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 console.log("error");
 </script>
 

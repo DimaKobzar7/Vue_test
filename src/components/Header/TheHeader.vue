@@ -45,33 +45,29 @@ export default {
     // коряво но работаяет нужно от обработчиков избавится
     // и анимация плавно не вылазит
     // возможно придется делать костыль из анимации для выезда ссылок
+    // переставил на css
     test() {
-      // console.log("object");
+      console.log("made on css transition");
       // const langIco = document.querySelector(".header__language");
       // console.log(langIco);
-      const langIco = document.querySelector(".header__language");
-      const rulang = document.querySelector(".header__switch-link--RU");
-      const uaLang = document.querySelector(".header__switch-link--UA");
+      // const langIco = document.querySelector(".header__language");
+      // const rulang = document.querySelector(".header__switch-link--RU");
+      // const uaLang = document.querySelector(".header__switch-link--UA");
 
-      // rulang.style.setProperty("opacity", "1");
-      // rulang.style.setProperty("transition", "left 1s, opacity 2s");
+      // langIco.addEventListener("mouseover", () => {
+      //   rulang.style.setProperty("opacity", "1");
+      //   rulang.style.setProperty("transition", "left 1s, opacity 2s");
 
-      // uaLang.style.setProperty("opacity", "1");
-      // uaLang.style.setProperty("transition", "left 1s, opacity 2s");
-      langIco.addEventListener("mouseover", () => {
-        rulang.style.setProperty("opacity", "1");
-        rulang.style.setProperty("transition", "left 1s, opacity 2s");
+      //   uaLang.style.setProperty("opacity", "1");
+      //   uaLang.style.setProperty("transition", "left 1s, opacity 2s");
+      // });
 
-        uaLang.style.setProperty("opacity", "1");
-        uaLang.style.setProperty("transition", "left 1s, opacity 2s");
-      });
-
-      langIco.addEventListener("mouseout", () => {
-        uaLang.style.setProperty("opacity", "0");
-        rulang.style.setProperty("opacity", "0");
-        rulang.style.setProperty("transition", "left 1s, opacity 2s");
-        uaLang.style.setProperty("transition", "left 2s, opacity 2.5s");
-      });
+      // langIco.addEventListener("mouseout", () => {
+      //   uaLang.style.setProperty("opacity", "0");
+      //   rulang.style.setProperty("opacity", "0");
+      //   rulang.style.setProperty("transition", "left 1s, opacity 2s");
+      //   uaLang.style.setProperty("transition", "left 2s, opacity 2.5s");
+      // });
     },
   },
 };

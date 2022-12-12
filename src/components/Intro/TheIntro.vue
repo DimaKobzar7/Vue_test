@@ -70,7 +70,7 @@ console.log("main");
 </template>
 
 <script>
-import { ref } from "vue";
+// import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import TheHeader from "../Header/TheHeader.vue";
 // import RunningText from "../RunningText.vue";

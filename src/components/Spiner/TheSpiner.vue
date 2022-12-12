@@ -1,7 +1,3 @@
-<script setup>
-// import "../../assets/spiner.css";
-import "./Spiner.scss";
-</script>
 <template>
   <div v-on:mouseover="spin" class="spiner">
     <svg viewBox="0 0 100 100" width="100" height="100">
@@ -23,12 +19,9 @@ import "./Spiner.scss";
 </template>
 
 <script>
+import "./Spiner.scss";
 export default {
-  data() {
-    return {};
-  },
   methods: {
-    // коряво но работаяет нужно от обработчиков избавится
     spin() {
       const spiner = document.querySelector(".spiner");
       const spinerSvg = document.querySelector(".spiner svg");

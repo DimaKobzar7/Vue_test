@@ -16,7 +16,6 @@ import "./Logo.scss";
 
 <script>
 export default {
-  // анимация стала плавнее!!!
   mounted() {
     const container = document.querySelector("main");
     // console.log(container);

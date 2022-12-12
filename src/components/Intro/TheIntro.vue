@@ -11,6 +11,7 @@ import "./Intro.scss";
   <div class="intro">
     <TheHeader />
     <div class="intro__front">
+      <RunningText />
       <h1 class="intro__title">
         FULL-CYCLE <br />
         EVENT AGENCY
@@ -20,7 +21,7 @@ import "./Intro.scss";
         <TheSpiner />
       </div>
     </div>
-    <RunningText />
+    <!-- <RunningText /> -->
     <RouterLink
       to="/where"
       class="intro__horizontal-link intro__horizontal-link--left"

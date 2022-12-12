@@ -34,7 +34,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    opacity: 0.1;
+    // opacity: 0.1;
 
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #373737;
@@ -56,7 +56,8 @@
 
     &--left {
       // транслейт тут не нужен наверно
-      transform: rotate(180deg) translateX(-30%);
+      // transform: rotate(180deg) translateX(-30%);
+      transform: rotate(180deg);
       animation: runningTextDown 4s infinite linear;
 
       @include onTablet {

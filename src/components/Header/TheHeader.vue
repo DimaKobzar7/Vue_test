@@ -4,7 +4,7 @@ import "./Header.scss";
 
 <template>
   <header class="header">
-    <div v-on:mouseout="test" class="header__language">
+    <div class="header__language">
       <img src="../../images/svg/language.svg" alt="language" />
       <a class="header__switch-link header__switch-link--RU" href="#">RU</a>
       <a class="header__switch-link header__switch-link--UA" href="#">UA</a>
@@ -16,11 +16,6 @@ import "./Header.scss";
         viewBox="0 0 85 46"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <!-- <defs>
-                  <linear-gradient id="tttest" x1="0%">
-
-                  </linear-gradient>
-                <defs>  -->
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -35,40 +30,3 @@ import "./Header.scss";
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  data() {
-    return {};
-  },
-  methods: {
-    // коряво но работаяет нужно от обработчиков избавится
-    // и анимация плавно не вылазит
-    // возможно придется делать костыль из анимации для выезда ссылок
-    // переставил на css
-    test() {
-      console.log("made on css transition");
-      // const langIco = document.querySelector(".header__language");
-      // console.log(langIco);
-      // const langIco = document.querySelector(".header__language");
-      // const rulang = document.querySelector(".header__switch-link--RU");
-      // const uaLang = document.querySelector(".header__switch-link--UA");
-
-      // langIco.addEventListener("mouseover", () => {
-      //   rulang.style.setProperty("opacity", "1");
-      //   rulang.style.setProperty("transition", "left 1s, opacity 2s");
-
-      //   uaLang.style.setProperty("opacity", "1");
-      //   uaLang.style.setProperty("transition", "left 1s, opacity 2s");
-      // });
-
-      // langIco.addEventListener("mouseout", () => {
-      //   uaLang.style.setProperty("opacity", "0");
-      //   rulang.style.setProperty("opacity", "0");
-      //   rulang.style.setProperty("transition", "left 1s, opacity 2s");
-      //   uaLang.style.setProperty("transition", "left 2s, opacity 2.5s");
-      // });
-    },
-  },
-};
-</script>

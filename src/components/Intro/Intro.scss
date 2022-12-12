@@ -28,7 +28,11 @@
     }
 
     @include onDesktop {
-      // width: 1024px;
+      width: 727px;
+    }
+
+    @include onWideDesktop {
+      width: 1024px;
     }
   }
 

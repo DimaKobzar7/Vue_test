@@ -2,8 +2,8 @@
 import "../Error/Error.scss";
 import { RouterLink } from "vue-router";
 
-import barba from "@barba/core";
-import { gsap } from "gsap";
+// import barba from "@barba/core";
+// import { gsap } from "gsap";
 console.log("error");
 </script>
 
@@ -17,7 +17,7 @@ console.log("error");
   </main>
 </template>
 
-<script>
+<!-- <script>
 export default {
   mounted() {
     barba.init({
@@ -40,4 +40,4 @@ export default {
     });
   },
 };
-</script>
+</script> -->

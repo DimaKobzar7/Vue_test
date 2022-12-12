@@ -2,8 +2,8 @@
 import TheIntro from "../Intro/TheIntro.vue";
 import "./General.scss";
 import "./Logo.scss";
-import barba from "@barba/core";
-import { gsap } from "gsap";
+// import barba from "@barba/core";
+// import { gsap } from "gsap";
 // barba.init({
 //   // ...
 // });
@@ -55,24 +55,24 @@ export default {
     //     },
     //   ],
     // });
-    barba.init({
-      transitions: [
-        {
-          name: "opacity-transition",
-          async leave(data) {
-            console.log(data);
-            // return gsap.to(data.current.container, {
-            //   opacity: 0,
-            // });
-          },
-          enter(data) {
-            return gsap.from(data.next.container, {
-              opacity: 0,
-            });
-          },
-        },
-      ],
-    });
+    // barba.init({
+    //   transitions: [
+    //     {
+    //       name: "opacity-transition",
+    //       async leave(data) {
+    //         console.log(data);
+    //         // return gsap.to(data.current.container, {
+    //         //   opacity: 0,
+    //         // });
+    //       },
+    //       enter(data) {
+    //         return gsap.from(data.next.container, {
+    //           opacity: 0,
+    //         });
+    //       },
+    //     },
+    //   ],
+    // });
     const container = document.querySelector("main");
     // console.log(container);
     const animateit = function (e) {

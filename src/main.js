@@ -3,9 +3,9 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 import router from "./router";
-import barba from "@barba/core";
+// import barba from "@barba/core";
 
-import "./assets/main.css";
+import "./assets/main.scss";
 // import "./assets/container.scss";
 // import "./assets/_main.scss";
 

@@ -3,7 +3,7 @@
 import "./Spiner.scss";
 </script>
 <template>
-  <div v-on:mouseout="test" class="spiner">
+  <div v-on:mouseover="spin" class="spiner">
     <svg viewBox="0 0 100 100" width="100" height="100">
       <defs>
         <path
@@ -29,13 +29,11 @@ export default {
   },
   methods: {
     // коряво но работаяет нужно от обработчиков избавится
-    test() {
+    spin() {
       const spiner = document.querySelector(".spiner");
       const spinerSvg = document.querySelector(".spiner svg");
-      // console.log(spinerSvg);
-      spiner.addEventListener("mouseover", () => {
-        spinerSvg.style.setProperty("animation", "spin 5s infinite linear");
-      });
+
+      spinerSvg.style.setProperty("animation", "spin 5s infinite linear");
 
       spiner.addEventListener("mouseout", () => {
         spinerSvg.style.setProperty(

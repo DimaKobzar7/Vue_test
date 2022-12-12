@@ -9,8 +9,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@barba/core": "^2.9.7",
-    "gsap": "^3.11.3",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },

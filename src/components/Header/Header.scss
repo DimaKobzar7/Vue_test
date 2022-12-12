@@ -15,7 +15,6 @@
       height: 38px;
     }
 
-    // язык укр заезжяет обратн быстрее чем надо но в тз толлько про показ есть речь
     &:hover .header__switch-link--RU {
       left: 30px;
       opacity: 1;
@@ -56,13 +55,3 @@
     }
   }
 }
-
-// @keyframes show {
-//   from {
-//     transform: rotate(0deg);
-//   }
-
-//   to {
-//     transform: rotate(-360deg);
-//   }
-// }

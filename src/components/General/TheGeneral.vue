@@ -18,7 +18,6 @@ import "./Logo.scss";
 export default {
   mounted() {
     const container = document.querySelector("main");
-    // console.log(container);
     const animateit = function (e) {
       const title = document.querySelector(".intro__title");
 

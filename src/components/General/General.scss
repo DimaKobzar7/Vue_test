@@ -25,13 +25,6 @@ body {
   }
 }
 
-// @media (min-width: 768px) {
-//   .container {
-//     padding: 0 24px;
-//   }
-// }
-
-/* сделай отдельным елементом */
 .hamburger-menu {
   visibility: visible;
 
@@ -39,9 +32,3 @@ body {
     visibility: hidden;
   }
 }
-
-// @media (min-width: 768px) {
-//   .hamburger-menu {
-//     visibility: hidden;
-//   }
-// }

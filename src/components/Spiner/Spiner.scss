@@ -2,14 +2,17 @@
 
 .spiner {
   position: absolute;
-  height: 90px;
   bottom: -20px;
   right: 40px;
+
+  height: 90px;
+
   transform: rotate(-90deg);
 
   @include onTablet {
     bottom: 24px;
     right: 24px;
+
     height: 112px;
   }
 

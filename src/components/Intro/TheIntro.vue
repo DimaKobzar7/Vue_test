@@ -3,7 +3,6 @@ import { RouterLink } from "vue-router";
 import TheHeader from "../Header/TheHeader.vue";
 import RunningText from "../RunningText/TheRunningText.vue";
 import TheSpiner from "../Spiner/TheSpiner.vue";
-import "../../assets/intro.css";
 import "./Intro.scss";
 </script>
 
@@ -21,7 +20,6 @@ import "./Intro.scss";
         <TheSpiner />
       </div>
     </div>
-    <!-- <RunningText /> -->
     <RouterLink
       to="/where"
       class="intro__horizontal-link intro__horizontal-link--left"

@@ -33,9 +33,7 @@ import "./Intro.scss";
     >
       What?
     </RouterLink>
-    <RouterLink to="/who" class="intro__vertical-link"
-      >Who? {{ coordinates }}</RouterLink
-    >
+    <RouterLink to="/who" class="intro__vertical-link">Who?</RouterLink>
   </div>
 </template>
 

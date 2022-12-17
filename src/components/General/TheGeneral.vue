@@ -33,7 +33,9 @@ export default {
     };
   },
   methods: {
+    // пробовал stopPropagation модифкаторы собітий capture и self и получается проблема не в событии
     mouseData(e) {
+      // e.stopPropagation();
       const { offsetX: x, offsetY: y, view: cx, view: ch } = e;
       this.coordinateX = x;
       this.coordinateY = y;

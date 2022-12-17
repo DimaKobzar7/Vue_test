@@ -15,6 +15,7 @@ import "./Logo.scss";
           v-bind:coordinates="{
             xMove,
             yMove,
+            eventType,
           }"
         />
       </div>
@@ -28,6 +29,7 @@ export default {
     return {
       xMove: 0,
       yMove: 0,
+      eventType: "",
     };
   },
   methods: {
@@ -47,9 +49,12 @@ export default {
       // console.log(this.yMove);
 
       // перекинуть это как пропс в дочерний компонент
-      if (e.type === "mouseleave") {
-        this.$refs.text.style.transform = "";
-      }
+      // if (e.type === "mouseleave") {
+      //   this.$refs.text.style.transform = "";
+      // }
+      this.eventType = e.type;
+      // console.log(e.type);
+      // console.log(this.eventType);
     },
   },
 };

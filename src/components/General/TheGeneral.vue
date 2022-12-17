@@ -5,8 +5,7 @@ import "./Logo.scss";
 </script>
 
 <template>
-  <!-- надо тут все делать тут а конечные значения отправлять в интро и ставить стили с этими значениями на текст -->
-  <main @mousemove="mouseData" @mouseleave="mouseData" ref="container">
+  <main @mousemove="mouseData" @mouseleave="mouseData">
     <section class="section">
       <div class="container">
         <!-- <TheIntro v-bind:test="{ coordinateX: 12 }" /> -->

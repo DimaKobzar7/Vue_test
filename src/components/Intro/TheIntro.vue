@@ -8,7 +8,7 @@ import "./Intro.scss";
 </script>
 
 <template>
-  <div class="intro" @mousemove="test">
+  <div class="intro">
     <TheHeader />
     <div class="intro__front">
       <RunningText />

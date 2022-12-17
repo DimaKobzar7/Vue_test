@@ -16,6 +16,8 @@ import "./Logo.scss";
 
 <script>
 export default {
+  // пробуй стоп пропагейшн чобы событие на ссылках и на спинере не ломало анимацию текста
+  // и смотри модификаторы событий как capture и подобные а лучше сразу self попробуй чтобы только на мейне оно работало
   mounted() {
     const container = document.querySelector("main");
     const animateit = function (e) {

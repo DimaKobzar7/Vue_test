@@ -20,6 +20,14 @@
     height: 118px;
   }
 
+  &--start {
+    animation: spin 5s infinite linear;
+  }
+
+  &--stop {
+    animation: spin 5s infinite linear paused;
+  }
+
   svg {
     height: auto;
     width: 90px;
@@ -62,3 +70,11 @@
     transform: rotate(-360deg);
   }
 }
+
+// .start-spin {
+//   animation: spin 5s infinite linear;
+// }
+
+// .stop-spin {
+//   animation: spin 5s infinite linear paused;
+// }

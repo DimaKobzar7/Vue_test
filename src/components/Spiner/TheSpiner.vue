@@ -1,5 +1,13 @@
 <template>
-  <div v-on:mouseover="spin" class="spiner">
+  <div
+    @mouseleave="stopSpin"
+    @mouseover="startSpin"
+    class="spiner"
+    :class="{
+      'spiner--start': active,
+      'spiner--stop': !active,
+    }"
+  >
     <svg viewBox="0 0 100 100" width="100" height="100">
       <defs>
         <path
@@ -21,20 +29,30 @@
 <script>
 import "./Spiner.scss";
 export default {
+  data() {
+    return {
+      active: false,
+    };
+  },
   methods: {
-    spin() {
-      const spiner = document.querySelector(".spiner");
-      const spinerSvg = document.querySelector(".spiner svg");
-
-      spinerSvg.style.setProperty("animation", "spin 5s infinite linear");
-
-      spiner.addEventListener("mouseout", () => {
-        spinerSvg.style.setProperty(
-          "animation",
-          "spin 5s infinite linear paused"
-        );
-      });
+    startSpin() {
+      // console.log(this.active);
+      this.active = true;
+    },
+    stopSpin() {
+      this.active = false;
     },
   },
+  // хотел сделать этот компютед для оптимизации чтобы не вылазило одно событие несколько раз но не срабоатло
+  // может потому что рассчеты тут не происходят а сразу замена и компутед тут не актуален?
+  // computed: {
+  //   startSpin() {
+  //     console.log(this.active);
+  //     return (this.active = true);
+  //   },
+  //   stopSpin() {
+  //     return (this.active = false);
+  //   },
+  // },
 };
 </script>

@@ -12,7 +12,7 @@ import "./Intro.scss";
     <TheHeader />
     <div class="intro__front">
       <RunningText />
-      <h1 class="intro__title">
+      <h1 class="intro__title" ref="text">
         FULL-CYCLE <br />
         EVENT AGENCY
       </h1>
@@ -41,42 +41,30 @@ import "./Intro.scss";
 
 <script>
 export default {
-  // props: ["test"],
   props: {
     coordinates: Object,
   },
-  data() {},
+
   methods: {
-    testt() {
-      // const { offsetWidth: width, offsetHeight: height } = this;
-      // console.log(width, height, this);
+    testt(e) {
+      // let move = 25;
+      // let xMove =
+      //   (this.coordinates.coordinateX / this.coordinates.clientWidth) *
+      //     (move * 2) -
+      //   move;
+      // let yMove =
+      //   (this.coordinates.coordinateY / this.coordinates.clientHeight) *
+      //     (move * 2) -
+      //   move;
+
+      console.log(this.$refs.text);
+      // console.log(this.coordinates);
+      this.$refs.text.style.transform = `translate(${this.coordinates.xMove}px, ${this.coordinates.yMove}px)`;
+      // console.log(this.coordinates);
+      if (e.type === "mouseleave") {
+        this.$refs.text.style.transform = "";
+      }
     },
   },
-  mounted() {
-    const { offsetWidth: width, offsetHeight: height } = this;
-    console.log(width, height, this);
-  },
-  // mounted() {
-  //   const container = document.querySelector("main");
-  //   const animateit = function (e) {
-  //     const title = document.querySelector(".intro__title");
-
-  //     const { offsetX: x, offsetY: y } = e;
-  //     const { offsetWidth: width, offsetHeight: height } = this;
-
-  //     let move = 25;
-  //     let xMove = (x / width) * (move * 2) - move;
-  //     let yMove = (y / height) * (move * 2) - move;
-
-  //     title.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-  //     if (e.type === "mouseleave") {
-  //       title.style.transform = "";
-  //     }
-  //   };
-
-  //   container.addEventListener("mousemove", animateit);
-  //   container.addEventListener("mouseleave", animateit);
-  // },
 };
 </script>

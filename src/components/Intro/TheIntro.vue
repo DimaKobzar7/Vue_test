@@ -8,11 +8,11 @@ import "./Intro.scss";
 </script>
 
 <template>
-  <div class="intro">
+  <div class="intro" @mousemove="test">
     <TheHeader />
     <div class="intro__front">
       <RunningText />
-      <h1 class="intro__title" ref="text">
+      <h1 class="intro__title tracker" ref="text">
         FULL-CYCLE <br />
         EVENT AGENCY
       </h1>
@@ -33,11 +33,13 @@ import "./Intro.scss";
     >
       What?
     </RouterLink>
-    <RouterLink to="/who" class="intro__vertical-link">Who?</RouterLink>
+    <RouterLink to="/who" class="intro__vertical-link"
+      >Who? {{ coordinates }}</RouterLink
+    >
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   props: {
     coordinates: Object,
@@ -78,4 +80,4 @@ export default {
   //   },
   // },
 };
-</script>
+</script> -->

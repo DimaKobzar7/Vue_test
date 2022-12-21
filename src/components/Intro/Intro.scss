@@ -53,7 +53,7 @@
 
   &__title {
     position: absolute;
-    top: 30%;
+    // top: 30%;
     z-index: 2;
 
     margin: 0;
@@ -69,16 +69,41 @@
 
     transition: transform 0.3s;
 
+    // test
+    // надо стартовый трансформ сделать иначе придется на js что то делать
+    // чтобы влиять на этот лефт динамически так как он изначально меняет расположение текста
+    // или его ставить как доп сет проперти в обработчик
+    // left: -30px;
+    // left: -25%;
+    // top: 10%;
+
+    top: 15%;
+    left: -15%;
+
+    @media (min-width: 405px) {
+      top: 15%;
+      left: -23%;
+    }
+
     @include onTablet {
       font-size: 58px;
+      // text animation test
+      // left: -25%;
+      left: -18%;
+      top: 10%;
     }
 
     @include onDesktop {
       font-size: 58px;
+      // text animation test
+      left: -7%;
+      top: 20%;
     }
 
     @include onWideDesktop {
       font-size: 82px;
+      // text animation test
+      left: -5%;
     }
   }
 

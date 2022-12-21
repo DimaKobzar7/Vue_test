@@ -25,11 +25,11 @@ const router = createRouter({
       name: "who",
       component: Error,
     },
-    // {
-    //   path: "/",
-    //   name: "goBack",
-    //   component: TheGeneral,
-    // },
+    {
+      path: "/",
+      name: "goBack",
+      component: TheGeneral,
+    },
   ],
 });
 

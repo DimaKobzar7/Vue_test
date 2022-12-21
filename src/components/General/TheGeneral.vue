@@ -5,7 +5,8 @@ import "./Logo.scss";
 </script>
 
 <template>
-  <main @mousemove="mouseData" @mouseleave="mouseData">
+  <!-- надо тут все делать тут а конечные значения отправлять в интро и ставить стили с этими значениями на текст -->
+  <main @mousemove="mouseData" @mouseleave="mouseData" ref="container">
     <section class="section">
       <div class="container">
         <!-- <TheIntro v-bind:test="{ coordinateX: 12 }" /> -->
@@ -24,6 +25,46 @@ import "./Logo.scss";
 
 <script>
 export default {
+  mounted() {
+    const pos = { x: 0, y: 0 };
+
+    const saveCursorPosition = function (x, y) {
+      pos.x = (x / window.innerWidth).toFixed(2);
+      pos.y = (y / window.innerHeight).toFixed(2);
+      document.documentElement.style.setProperty("--x", pos.x);
+      document.documentElement.style.setProperty("--y", pos.y);
+      // за этими значениями можно смотреть глдя на тег html
+      // console.log(pos.x, pos.y);
+      // console.log(document.querySelector(".intro__title"));
+    };
+
+    document.addEventListener("mousemove", (e) => {
+      saveCursorPosition(e.clientX, e.clientY);
+      // let leftFix = document.querySelector(".intro__title");
+
+      // leftFix.style.left = "-80px";
+      // leftFix.style.transition = "left 0.1s";
+    });
+
+    document.addEventListener("mouseleave", () => {
+      document.documentElement.style.setProperty("--x", 0.5);
+      document.documentElement.style.setProperty("--y", 0.5);
+      // document.documentElement.style.setProperty("--x", 0);
+      // document.documentElement.style.setProperty("--y", 0);
+      // document.documentElement.style.setProperty("--x", 0);
+      // document.documentElement.style.setProperty("--y", 0.5);
+      // console.log(e);
+      // let leftFix = document.querySelector(".intro__title");
+
+      // leftFix.style.left = "-0px";
+      // leftFix.style.transition = "left 0.1s";
+    });
+  },
+};
+</script>
+
+<!-- <script>
+export default {
   data() {
     return {
       xMove: 0,
@@ -32,9 +73,7 @@ export default {
     };
   },
   methods: {
-    // пробовал stopPropagation модифкаторы собітий capture и self и получается проблема не в событии
     mouseData(e) {
-      // e.stopPropagation();
       const { offsetX: x, offsetY: y, view: cx, view: ch } = e;
       this.coordinateX = x;
       this.coordinateY = y;
@@ -56,10 +95,19 @@ export default {
       this.eventType = e.type;
       // console.log(e.type);
       // console.log(this.eventType);
+      const testObserve = new IntersectionObserver((item) => {
+        console.log(item);
+      });
+
+      // console.log(testObserve);
+
+      testObserve.observe(this.$refs.container);
+      // получаю значения высоты и ширины вьюпорта но я их и с виндоу получаю
+      console.log(this.$refs.container);
     },
   },
 };
-</script>
+</script> -->
 
 <!-- <script>
 export default {

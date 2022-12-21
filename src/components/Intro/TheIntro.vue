@@ -63,27 +63,28 @@ export default {
     },
   },
 
-  // methods: {
-  //   test() {
-  //     // let move = 25;
-  //     // let xMove =
-  //     //   (this.coordinates.coordinateX / this.coordinates.clientWidth) *
-  //     //     (move * 2) -
-  //     //   move;
-  //     // let yMove =
-  //     //   (this.coordinates.coordinateY / this.coordinates.clientHeight) *
-  //     //     (move * 2) -
-  //     //   move;
+  methods: {
+    test(e) {
+      // let move = 25;
+      // let xMove =
+      //   (this.coordinates.coordinateX / this.coordinates.clientWidth) *
+      //     (move * 2) -
+      //   move;
+      // let yMove =
+      //   (this.coordinates.coordinateY / this.coordinates.clientHeight) *
+      //     (move * 2) -
+      //   move;
 
-  //     // console.log(this.$refs.text);
-  //     // console.log(this.coordinates);
-  //     this.$refs.text.style.transform = `translate(${this.coordinates.xMove}px, ${this.coordinates.yMove}px)`;
-  //     // console.log(this.coordinates);
-  //     console.log(this.coordinates.eventType);
-  //     if (this.coordinates.eventType === "mouseleave") {
-  //       this.$refs.text.style.transform = "";
-  //     }
-  //   },
-  // },
+      console.log(e);
+      // console.log(this.$refs.text);
+      // console.log(this.coordinates);
+      this.$refs.text.style.transform = `translate(${this.coordinates.xMove}px, ${this.coordinates.yMove}px)`;
+      // console.log(this.coordinates);
+      // console.log(this.coordinates.eventType);
+      if (this.coordinates.eventType === "mouseleave") {
+        this.$refs.text.style.transform = "";
+      }
+    },
+  },
 };
 </script> -->

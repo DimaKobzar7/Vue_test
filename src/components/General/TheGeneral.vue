@@ -5,8 +5,7 @@ import "./Logo.scss";
 </script>
 
 <template>
-  <!-- надо тут все делать тут а конечные значения отправлять в интро и ставить стили с этими значениями на текст -->
-  <main @mousemove="mouseData" @mouseleave="mouseData" ref="container">
+  <main @mousemove="startAnimation" @mouseleave="stopAnimation" ref="container">
     <section class="section">
       <div class="container">
         <!-- <TheIntro v-bind:test="{ coordinateX: 12 }" /> -->
@@ -25,6 +24,39 @@ import "./Logo.scss";
 
 <script>
 export default {
+  // data() {
+  //   return {
+  //     x: 0,
+  //     y: 0,
+  //   };
+  // },
+  methods: {
+    setTextAnimation(x, y) {
+      const pos = { x: 0, y: 0 };
+
+      pos.x = (x / window.innerWidth).toFixed(2);
+      pos.y = (y / window.innerHeight).toFixed(2);
+      // document.documentElement.style.setProperty("--x", pos.x);
+      // document.documentElement.style.setProperty("--y", pos.y);
+      this.$refs.container.style.setProperty("--x", pos.x);
+      this.$refs.container.style.setProperty("--y", pos.y);
+    },
+    startAnimation(e) {
+      // console.log(e.clientX, e.clientY);
+      this.setTextAnimation(e.clientX, e.clientY);
+    },
+    stopAnimation() {
+      // document.documentElement.style.setProperty("--x", 0.5);
+      // document.documentElement.style.setProperty("--y", 0.5);
+      this.$refs.container.style.setProperty("--x", 0.5);
+      this.$refs.container.style.setProperty("--y", 0.5);
+    },
+  },
+};
+</script>
+
+<!-- <script>
+export default {
   mounted() {
     const pos = { x: 0, y: 0 };
 
@@ -33,35 +65,19 @@ export default {
       pos.y = (y / window.innerHeight).toFixed(2);
       document.documentElement.style.setProperty("--x", pos.x);
       document.documentElement.style.setProperty("--y", pos.y);
-      // за этими значениями можно смотреть глдя на тег html
-      // console.log(pos.x, pos.y);
-      // console.log(document.querySelector(".intro__title"));
     };
 
     document.addEventListener("mousemove", (e) => {
       saveCursorPosition(e.clientX, e.clientY);
-      // let leftFix = document.querySelector(".intro__title");
-
-      // leftFix.style.left = "-80px";
-      // leftFix.style.transition = "left 0.1s";
     });
 
     document.addEventListener("mouseleave", () => {
       document.documentElement.style.setProperty("--x", 0.5);
       document.documentElement.style.setProperty("--y", 0.5);
-      // document.documentElement.style.setProperty("--x", 0);
-      // document.documentElement.style.setProperty("--y", 0);
-      // document.documentElement.style.setProperty("--x", 0);
-      // document.documentElement.style.setProperty("--y", 0.5);
-      // console.log(e);
-      // let leftFix = document.querySelector(".intro__title");
-
-      // leftFix.style.left = "-0px";
-      // leftFix.style.transition = "left 0.1s";
     });
   },
 };
-</script>
+</script> -->
 
 <!-- <script>
 export default {

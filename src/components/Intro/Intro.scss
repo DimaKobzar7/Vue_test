@@ -53,7 +53,7 @@
 
   &__title {
     position: absolute;
-    // top: 30%;
+    top: 30%;
     z-index: 2;
 
     margin: 0;
@@ -74,9 +74,8 @@
     // top: 15%;
     // left: -15%;
 
-    @media (min-width: 405px) {
-      // top: 15%;
-      // left: -23%;
+    @media (min-width: 375px) {
+      top: 0;
     }
 
     @include onTablet {

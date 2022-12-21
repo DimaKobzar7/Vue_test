@@ -36,23 +36,11 @@ export default {
   },
   methods: {
     startSpin() {
-      // console.log(this.active);
       this.active = true;
     },
     stopSpin() {
       this.active = false;
     },
   },
-  // хотел сделать этот компютед для оптимизации чтобы не вылазило одно событие несколько раз но не срабоатло
-  // может потому что рассчеты тут не происходят а сразу замена и компутед тут не актуален?
-  // computed: {
-  //   startSpin() {
-  //     console.log(this.active);
-  //     return (this.active = true);
-  //   },
-  //   stopSpin() {
-  //     return (this.active = false);
-  //   },
-  // },
 };
 </script>

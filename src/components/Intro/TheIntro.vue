@@ -12,6 +12,12 @@ import "./Intro.scss";
     <TheHeader />
     <div class="intro__front">
       <RunningText />
+      <!-- <div class="testContainer">
+        <h1 class="intro__title tracker" ref="text">
+          FULL-CYCLE <br />
+          EVENT AGENCY
+        </h1>
+      </div> -->
       <h1 class="intro__title tracker" ref="text">
         FULL-CYCLE <br />
         EVENT AGENCY

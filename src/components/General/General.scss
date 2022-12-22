@@ -40,13 +40,6 @@ body {
 }
 
 .tracker {
-  // и влево почти не двигается это наверное из за того что 30 пикселей стоит
-  // transform: translate(calc(30px * var(--x)), calc(30px * var(--y)));
-  // transform: translate(calc(284px * var(--x)), calc(242.5px * var(--y)));
-  // transform: translate(calc(142px * var(--x)), calc(121.25px * var(--y)));
-  // transform: translate(calc(71px * var(--x)), calc(60.625px * var(--y)));
-
-  // transform: translate(calc(50px * var(--x)), calc(60.625px * var(--y)));
   // transform: translate(
   //   calc(-8% + 50px * var(--x)),
   //   calc(40% + 50px * var(--y))
@@ -54,25 +47,28 @@ body {
 
   transition: transform 0.1s;
   @media (min-width: 375px) {
-    // transform: translate(calc(71px * var(--x)), calc(60.625px * var(--y)));
+    // transform: translate(
+    //   calc(-8% + 50px * var(--x)),
+    //   calc(40% + 50px * var(--y))
+    // );
     transform: translate(
       calc(-8% + 50px * var(--x)),
-      calc(40% + 50px * var(--y))
+      calc(50% + 30px * var(--y))
     );
   }
 
   @include onTablet {
-    // transform: translate(calc(142px * var(--x)), calc(121.25px * var(--y)));
-    // transform: translate(calc(100px * var(--x)), calc(121.25px * var(--y)));
+    // transform: translate(
+    //   calc(-7% + 80px * var(--x)),
+    //   calc(25% + 120px * var(--y))
+    // );
     transform: translate(
       calc(-7% + 80px * var(--x)),
-      calc(25% + 120px * var(--y))
+      calc(35% + 80px * var(--y))
     );
   }
 
   @include onDesktop {
-    // transform: translate(calc(142px * var(--x)), calc(121.25px * var(--y)));
-    // transform: translate(calc(100px * var(--x)), calc(121.25px * var(--y)));
     transform: translate(
       calc(-5% + 80px * var(--x)),
       calc(50% + 160px * var(--y))

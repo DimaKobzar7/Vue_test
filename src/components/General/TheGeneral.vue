@@ -5,18 +5,15 @@ import "./Logo.scss";
 </script>
 
 <template>
-  <main @mousemove="startAnimation" @mouseleave="stopAnimation" ref="container">
+  <main
+    @mousemove="startTextAnimation"
+    @mouseleave="stopTextAnimation"
+    ref="container"
+    :style="{ '--x': this.x, '--y': this.y }"
+  >
     <section class="section">
       <div class="container">
-        <!-- <TheIntro v-bind:test="{ coordinateX: 12 }" /> -->
-        <!-- если координаты работают то допустим что контейнер мне не нужен -->
-        <TheIntro
-          v-bind:coordinates="{
-            xMove,
-            yMove,
-            eventType,
-          }"
-        />
+        <TheIntro />
       </div>
     </section>
   </main>
@@ -24,12 +21,33 @@ import "./Logo.scss";
 
 <script>
 export default {
-  // data() {
-  //   return {
-  //     x: 0,
-  //     y: 0,
-  //   };
-  // },
+  data() {
+    return {
+      x: 0.5,
+      y: 0.5,
+    };
+  },
+  methods: {
+    startTextAnimation(e) {
+      this.x = (e.clientX / window.innerWidth).toFixed(2);
+      this.y = (e.clientY / window.innerWidth).toFixed(2);
+    },
+    stopTextAnimation() {
+      this.x = 0.5;
+      this.y = 0.5;
+    },
+  },
+};
+</script>
+
+<!-- <script>
+export default {
+  data() {
+    return {
+      x: (this.x / window.innerWidth).toFixed(2),
+      y: (this.y / window.innerWidth).toFixed(2),
+    };
+  },
   methods: {
     setTextAnimation(x, y) {
       const pos = { x: 0, y: 0 };
@@ -53,7 +71,7 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 <!-- <script>
 export default {
